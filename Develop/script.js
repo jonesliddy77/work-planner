@@ -58,20 +58,21 @@ function layout(){
   localStorage.setItem('timeText', JSON.stringify(timeblocksSave));
   });
 }
-function checkTimes(){
-  for (var i = 0; i < 12; i++) {
-      var section = document.getElementById(timeArray[i]);
-      if(time === 4){
-          $(timeArray[5]).addClass("past");
-      }
-      else if(time < i){
-          $(timeArray[i]).addClass("future");
-      }
-      else {
-          $(timeArray[i]).addClass("present");
-      }
-  }
-}
+// function checkTimes(){
+//   for (var i = 9; i < 12; i++) {
+//     console.log(timeArray[i])
+//       var section = document.getElementById(timeArray[i]);
+//       if(time === i){
+//           $(timeArray[i]).addClass("past");
+//       }
+//       else if(time < i){
+//           $(timeArray[i]).addClass("future");
+//       }
+//       else {
+//           $('#'+ timeArray[i]).addClass("present");
+//       }
+//   }
+// }
 
 
 var timeSet= function() {
@@ -81,6 +82,6 @@ var timeSet= function() {
 }
 setInterval(timeSet,1000);
 layout();
-checkTimes(time);
+checkTimes();
 localText();
 
