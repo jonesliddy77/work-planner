@@ -82,6 +82,5 @@ var timeSet= function() {
 }
 setInterval(timeSet,1000);
 layout();
-checkTimes();
 localText();
 
